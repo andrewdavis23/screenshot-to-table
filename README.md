@@ -26,3 +26,14 @@ file = r'//n0adcdata3/redirect$/nuajd15/My Documents/Python/image to table/all b
 
 2. Binary image where each pixel is either black or white depending on if it is greater or less than the threshold value. The threshold is automatically determined using Otsu's method which is an option of cv2.threshold().  If you're trying to find the best threshold value and there are two values where, one, the image is intensly white and the other, intensly black.  In that situation, Otsu's method will work well to find the optimal middle value.  Recall your personal experience with a photo copier because that's the kind of thing that's going on here, though in more complicated images like a photo copy (with shadowy gradients), the gaussian filter should be used.  Luckly in this case, we're just using simple screenshots.  
 ![image](https://user-images.githubusercontent.com/47924318/120119081-bc4cb980-c163-11eb-95ef-bcf3d33f4cb2.png)
+
+3. How Erosion Works
+Erosion of a matrix (A) given structuring element (B).  Lay the center-cell of B on top of each cell in A.  If all 1's in B match with 1's in A, then the center-cell of B is a 1 in the resulting image.
+![image](https://user-images.githubusercontent.com/47924318/122680649-46fe6280-d1be-11eb-83fe-12864f722896.png)  
+Dilation is the opposite.  Overlay B on to each cell in A.  If at least one 1 in B matches with A, then the center-cell becomes a 1 in the resulting image.
+![image](https://user-images.githubusercontent.com/47924318/122680678-672e2180-d1be-11eb-94aa-27698ee88cfa.png)
+
+
+
+
+
