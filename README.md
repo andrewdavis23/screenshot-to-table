@@ -7,7 +7,7 @@
 # screenshot-to-table
 I can't take it anymore! This program will convert a screenshot of a table into a dataframe using computer vision (cv2) and optical character recognition (py-tesseract).
 
-No matter how many times you ask, it just isn't enough.
+No matter how many times you ask your unempathetic coworkers, they still manage to torture you and the company for that matter!  Transcribing a screenshot increases the probability of data entry errors which can cost $$$!
 
 The file 'screenshot to table demo.py' will demonstrate the image processing that is taking place in the program.  All of the file names for the test images are in the python code.  Just comment out all but one.
 
