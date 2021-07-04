@@ -1,10 +1,16 @@
-# sources
+# screenshot-to-table readme  
+
+## Sources
 
 - [General problem solution](https://towardsdatascience.com/a-table-detection-cell-recognition-and-text-extraction-algorithm-to-convert-tables-to-excel-files-902edcf289ec)
 - [Morphological Operations used in computer vision (cv2 module)](https://docs.opencv.org/3.4/d4/d76/tutorial_js_morphological_ops.html)
 - [VIDEO: Erosion and Dilation in Image Processing | morphological operations in image processing](https://www.youtube.com/watch?v=2LAooUu1IjQ&t=525s)
 
-# screenshot-to-table
+## Programming Notes
+- if the structuring element line is of even length, the grid lines will be transposed after dilation
+- there is bug: cv2.erode and cv2.dilation are performing each other's function
+
+## What the Program Does
 I can't take it anymore! This program will convert a screenshot of a table into a dataframe using computer vision (cv2) and optical character recognition (py-tesseract).
 
 No matter how many times you ask your unempathetic coworkers, they still manage to torture you and the company for that matter!  Transcribing a screenshot increases the probability of data entry errors which can cost $$$!
@@ -19,7 +25,7 @@ The file 'screenshot to table demo.py' will demonstrate the image processing tha
 file = r'//n0adcdata3/redirect$/nuajd15/My Documents/Python/image to table/all borders simple.jpg'
 ```
 
-# Examples / Notes
+# White Paper
 
 ## Import Image
 Screenshot of an Excel file is uploaded as a gray scale image.  Each pixel will be read as a value between 0 and 255 (black to white).  In the next step, each pixel will have a value of either 0 or 255.  
