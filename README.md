@@ -62,6 +62,11 @@ axis[1, 1].set_title('cv2.dilate(image_1, ver_kernel, iterations={})'.format(ver
 ```
 ![image](https://user-images.githubusercontent.com/47924318/124395950-ff56fb00-dcd4-11eb-8140-f9cf6602f589.png)
 
+## Getting the Grid and Text
+![image](https://user-images.githubusercontent.com/47924318/124398868-05090c80-dce6-11eb-8483-58475b6f8e74.png)
+![image](https://user-images.githubusercontent.com/47924318/124398942-6335ef80-dce6-11eb-8a80-535e01b0327a.png)
+![image](https://user-images.githubusercontent.com/47924318/124398950-71840b80-dce6-11eb-8f60-943f1bff8146.png)
+
 
 
 
