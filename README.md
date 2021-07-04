@@ -42,4 +42,6 @@ Dilation with the same vertical kernal is applied for the same number of iterati
 ![image](https://user-images.githubusercontent.com/47924318/122683806-a6b13980-d1cf-11eb-8af3-53dcef744c77.png)  
 ![image](https://user-images.githubusercontent.com/47924318/122683817-b2046500-d1cf-11eb-8834-1115ad79d3fc.png)  
 
+It looks to me like erosion is not happening where it should be.  Here the vertical kernal is a 3 by 1 matrix of ones.
+![image](https://user-images.githubusercontent.com/47924318/124393108-e8a9a780-dcc6-11eb-8aa3-efd87b42b3bc.png)
 
