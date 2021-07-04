@@ -42,6 +42,20 @@ Dilation with the same vertical kernal is applied for the same number of iterati
 ![image](https://user-images.githubusercontent.com/47924318/122683806-a6b13980-d1cf-11eb-8af3-53dcef744c77.png)  
 ![image](https://user-images.githubusercontent.com/47924318/122683817-b2046500-d1cf-11eb-8834-1115ad79d3fc.png)  
 
-It looks to me like erosion is not happening where it should be.  Here the vertical kernal is a 3 by 1 matrix of ones.
-![image](https://user-images.githubusercontent.com/47924318/124393108-e8a9a780-dcc6-11eb-8aa3-efd87b42b3bc.png)
+## :beetle: I think I found a bug where cv2.dilate is performing erosion and cv2.erosion is performing dilation. :beetle:  
+You can clearly see that image_1 is being dilated when cv2.erode is called
+```python3
+image_1 = cv2.erode(img_bin, ver_kernel, iterations=vert_iter)
+vertical_lines = cv2.dilate(image_1, ver_kernel, iterations=vert_iter)
+
+axis[1, 0].imshow(image_1,cmap='gray')
+axis[1, 0].set_title('cv2.erode(img_bin, ver_kernel, iterations={}) len(ver_kernel)={}'.format(vert_iter,len(ver_kernel)))
+
+axis[1, 1].imshow(vertical_lines,cmap='gray')
+axis[1, 1].set_title('cv2.dilate(image_1, ver_kernel, iterations={})'.format(vert_iter))
+```
+![image](https://user-images.githubusercontent.com/47924318/124395950-ff56fb00-dcd4-11eb-8140-f9cf6602f589.png)
+
+
+
 
