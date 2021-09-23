@@ -132,7 +132,34 @@ for c in contours:
 axis[1,0].imshow(image,cmap='gray')
 axis[1,0].set_title('boxes over image')
 
+#Creating two lists to define row and column in which cell is located
+row=[]
+column=[]
+j=0
+#Sorting the boxes to their respective row and column
+for i in range(len(box)):
+    if(i==0):
+        column.append(box[i])
+        previous=box[i]
+    else:
+        if(box[i][1]<=previous[1]+mean/2):
+            column.append(box[i])
+            previous=box[i]
+            if(i==len(box)-1):
+                row.append(column)
+        else:
+            row.append(column)
+            column=[]
+            previous = box[i]
+            column.append(box[i])
+print(column)
+print(row)
 
+#calculating maximum number of cells
+countcol = 0
+for i in range(len(row)):
+    countcol = len(row[i])
+    if countcol > countcol:
+        countcol = countcol
 
 plt.show()
-
