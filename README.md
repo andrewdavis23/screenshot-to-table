@@ -68,5 +68,3 @@ axis[1, 1].set_title('cv2.dilate(image_1, ver_kernel, iterations={})'.format(ver
 ![image](https://user-images.githubusercontent.com/47924318/124398950-71840b80-dce6-11eb-8f60-943f1bff8146.png)
 
 
-
-
